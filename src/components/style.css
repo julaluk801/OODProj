@@ -1,0 +1,149 @@
+body {
+  width: 100vw;
+  height: 900px;
+  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header/Blog Title */
+.header {
+  /* padding: 20px; */
+  font-size: 40px;
+  /* text-align: center; */
+  background: rgb(255, 255, 255);
+  margin: auto;
+  margin-top: 20px;
+  /* margin-left: 30px; */
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  /* float: left; */
+  width: 55%;
+  margin-top: 20px;
+  margin-left: -120px;
+}
+
+/* Right column */
+.rightcolumn {
+  width: 49%;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+aside{
+  margin-top: 20px;
+  margin-left: 25px;
+  width: 305px;
+  height: 700px;
+  text-align: center;
+  background-color:rgb(204, 12, 20);
+  float: left;
+} 
+
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: auto;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.card2 {
+  
+  background-color: white;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.card3 {
+  width: 435px;
+  background-color: white;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.card image{
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  background-color:rgb(214, 163, 164);
+  float: left;
+}
+
+.card dis{
+  margin-left: 25px;
+  width: 500px;
+  height: 130px;
+  text-align: left;
+  background-color:rgb(255, 154, 154);
+  float: left;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(235, 198, 199);
+  overflow: hidden;
+}
+.mask {
+  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg'); 
+  background-attachment: fixed;
+  background-size: cover;
+  width: 1200px;
+  margin: 0 auto;
+}
+.mask2 {
+  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg'); 
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.container12 {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+

@@ -1,0 +1,26 @@
+.Registerheader{
+    padding-top: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+.col-4{
+    margin-left: -200px;
+    
+}
+
+.form-control{
+  width: 390px;
+}
+
+.selected{
+  width:380px;
+}
+
+.submit{
+  margin-top: 30px;
+  margin-left: 280px;
+}
+.btn {
+  margin-right: 20px;
+}

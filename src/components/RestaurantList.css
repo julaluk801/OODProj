@@ -1,0 +1,32 @@
+.link {
+    color: rgb(0, 0, 0);
+    
+  }
+
+.header{
+  padding-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  background-color: rgb(235, 198, 199);
+}
+
+.thead-dark{
+  color:black;
+}
+
+
+.table {
+  border-style: solid;
+  border-color: rgb(255, 18, 18);
+}
+
+.th {
+  border-style: solid;
+  border-color: rgb(219, 40, 40);
+}
+
+.tr {
+  border-style: solid;
+  border-color: rgb(255, 32, 24);
+}
+
