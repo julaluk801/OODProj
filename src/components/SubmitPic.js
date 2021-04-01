@@ -440,7 +440,7 @@ handleUploadPic8 = () => {
               </div>  
             
                 <div className="SubmitPiccol">
-                          <Link to ={`/`} class="btn btn-primary" > Go to Restaurant List </Link>      
+                          <Link to ={`/RestaurantList`} class="btn btn-primary" > Go to Restaurant List </Link>      
                 </div>
                 <br/>
             </div>

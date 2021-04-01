@@ -93,11 +93,15 @@ export function AuthProvider({ children }) {
   }
 
   function updateEmail(email) {
-    return currentUser.updateEmail(email)
+    return currentUser.updateEmail(email).then(
+      database.ref("users").child(auth.currentUser.uid).update({"email": email})
+    )
   }
 
   function updatePassword(password) {
-    return currentUser.updatePassword(password)
+    return currentUser.updatePassword(password).then(
+      database.ref("users").child(auth.currentUser.uid).update({"password": password})
+    )
   }
 
   function updateFname(uid, Fname) {
