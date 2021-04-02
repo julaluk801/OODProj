@@ -28,6 +28,7 @@ class ApprovalList extends Component {
     var resshapshot = await resRef.once('value');
     this.SelectDataRes(resshapshot.val());
 
+
     var templist = [];
     for(var i in this.state.users){
       if(this.state.users[i].role.owner === true){
@@ -52,7 +53,9 @@ class ApprovalList extends Component {
           if(countRes!==0){
             templist.push({uid: this.state.users[i].uid, owner: this.state.users[i].Fname+" "+  this.state.users[i].Lname, countRes: countRes})
           }
-        } 
+
+        }
+        
       }
 
     };

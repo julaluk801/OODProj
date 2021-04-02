@@ -49,6 +49,7 @@ class ResOwnerList extends Component {
         });
         
         return (
+
             <>
                 <div>
                 <NavbarLogout/>
@@ -66,6 +67,7 @@ class ResOwnerList extends Component {
                         </table>
                     </div>
                 </div>
+
             </>
         )
     }
