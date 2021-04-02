@@ -9,14 +9,13 @@ import { Button , Navbar , Nav , NavDropdown , FormControl , Form , Alert } from
 class ResRegistInfo extends Component {
   constructor(props){
       super(props);
-      
       this.state = {
           Resinfo:[],
           usercard: null,
       };
   }
 
-  componentDidMount(){
+  sendingRequest(){
     let app = firebase.database().ref('Restaurants/'+ this.props.match.params.key);
         app.on('value', snapshot => {
             console.log(snapshot.val());
