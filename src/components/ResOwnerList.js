@@ -14,7 +14,7 @@ class ResOwnerList extends Component {
         }
     }
 
-    componentDidMount(){
+    showResOwnerRequest(){
         let app = firebase.database().ref('Restaurants');
         app.orderByChild('uid').equalTo(this.props.match.params.uid).on("value", snapshot=> {
           console.log('Hello world',snapshot.val());
@@ -53,15 +53,13 @@ class ResOwnerList extends Component {
             <>
                 <div>
                 <NavbarLogout/>
-                    </div>
-                    
+                </div>    
                     <div>
-                    
                     <div class='container' style={{marginTop: 20}}>
                     <h5>ชื่อเจ้าของร้าน: {this.props.match.params.owner} </h5>
                     <table className="table table-sm table-bordered" >
                             <tr className="thead-dark">
-                            <th width="20%">วัน/เดือน/ปี</th>
+                            <th width="20%">วัน/เวลาที่ส่งคำร้องขอ</th>
                                 <th width="20%">ชื่อร้านอาหาร</th>
                                 <th width="20%">ข้อมูลการลงทะเบียน</th>
                             </tr>
