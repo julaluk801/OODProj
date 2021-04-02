@@ -18,44 +18,40 @@ class ApprovalList extends Component {
     }
   }
     
-  async componentDidMount(){
+  async showListRequest(){
     const userRef = firebase.database().ref('users');
     var shapshotuser = await userRef.once('value');
     this.SelectData(shapshotuser.val());
-    // await userRef.on('value', snapshot => {
-    //   this.SelectData(snapshot.val());
-    // });
+
 
     const resRef = firebase.database().ref('Restaurants');
     var resshapshot = await resRef.once('value');
     this.SelectDataRes(resshapshot.val());
-    // await resRef.on('value', snapshot => {
-    //   this.SelectDataRes(snapshot.val());
-    // });
+
 
     var templist = [];
     for(var i in this.state.users){
       if(this.state.users[i].role.owner === true){
-        var count =0;
+        var countRes =0;
         if(this.state.users[i].Fname == ""){
           for(var j in this.state.Restaurants){
             if((this.state.Restaurants[j].uid === this.state.users[i].uid) && this.state.Restaurants[j].status != true){
-              count++;
+              countRes++;
             }
           }
-          if(count!==0){
-            templist.push({uid: this.state.users[i].uid, owner: "None", count: count})
+          if(countRes!==0){
+            templist.push({uid: this.state.users[i].uid, owner: "None", countRes: countRes})
           }
         }  
           
         else{
           for(var j in this.state.Restaurants){
             if((this.state.Restaurants[j].uid === this.state.users[i].uid) && this.state.Restaurants[j].status != true){
-              count++;
+              countRes++;
             }
           }
-          if(count!==0){
-            templist.push({uid: this.state.users[i].uid, owner: this.state.users[i].Fname+" "+  this.state.users[i].Lname, count: count})
+          if(countRes!==0){
+            templist.push({uid: this.state.users[i].uid, owner: this.state.users[i].Fname+" "+  this.state.users[i].Lname, countRes: countRes})
           }
 
         }
@@ -105,7 +101,7 @@ class ApprovalList extends Component {
           return (
           <tr>
             <td>{user.owner}</td>
-            <td>{user.count}</td>
+            <td>{user.countRes}</td>
             <td>
               <a href={"/resown/"+ user.uid+"/"+user.owner} >ดูร้านอาหาร</a></td>
           </tr>
@@ -124,9 +120,9 @@ class ApprovalList extends Component {
                   </div>
                   <table className="table table-sm table-bordered">
                     <tr className="thead-dark">
-                      <th width="20%">Owner Name</th>
-                        <th width="20%">Name</th>
-                        <th width="20%">Check Info</th>
+                      <th width="20%">ชื่อเจ้าของร้าน</th>
+                        <th width="20%">ชื่อร้านอาหาร</th>
+                        <th width="20%">รายการร้านอาหาร</th>
                     </tr>
                     {userNodes}
                   </table>
