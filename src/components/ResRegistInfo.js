@@ -45,7 +45,6 @@ class ResRegistInfo extends Component {
           <div>
           <NavbarLogout/>
                   <br></br>
-                  
                   <div class='containerres'>
                     <br></br>
                     <div className="parent" style={{textAlign:'left'}}>
@@ -53,7 +52,6 @@ class ResRegistInfo extends Component {
                         <div>
                           <p><h5>ข้อมูลเจ้าของร้าน</h5></p>
                         </div>
-                        
                         <p>Owner Name: {this.props.match.params.owner}</p>
                         <p>Restaurants Name: {this.state.Resinfo?.Name}</p>
                         <p>Address: {this.state.Resinfo?.Address}</p>
@@ -73,30 +71,23 @@ class ResRegistInfo extends Component {
                       <div className="info2">
                         <img src={this.state.usercard || 'http://via.placeholder.com/350x250'} alt="Uploaded images" height="250" width="350"></img>
                       </div>
-                        {/* <button style={{margin:10}} onClick={this.handleUpdate}>อนุมัติ</button> <button type="button2" style = {{margin:10}}>ไม่อนุมัติ</button> */}
-                        {/* <Button color='secondary'>
-                          <Link to="/">อนุมัติ</Link>
-                        </Button> */}    
                     </div>
-                  </div>
-                 
+                  </div>                
                   <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} >
                     <button type="button" class="btn btn-success" onClick={event=> window.location.href='/approval'} style={{margin:20}}>อนุมัติ</button>
                     <button type="button" class="btn btn-danger" onClick={event =>window.location.href='/approval'} style={{margin:20}}>ไม่อนุมัติ</button>
-
-                    {/* <Button color="#841584" href="/" component={ApprovalList} style={{margin:20}}>อนุมัติ</Button> <Button color='red' href="/" component={ApprovalList} style={{margin:20}}>ไม่อนุมัติ</Button> */}
+                    {/* <button style={{margin:10}} onClick={this.handleUpdate}>อนุมัติ</button> <button type="button2" style = {{margin:10}}>ไม่อนุมัติ</button> */}
+                    {/* <Button color='secondary'>
+                      <Link to="/">อนุมัติ</Link>
+                    </Button> */}  
                   </div>
                   <br></br>
-                  {/* <button name="approve" onClick = {this.handleUpdate(this.props.match.params)}>Approve</button><button onClick = {this.handleDisUpdate}>Disapprove</button> */}
-                  {/* </div> */}
                   
               </div>
         </>
 
     )
   }
-
-
 
 }
 
